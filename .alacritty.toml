@@ -1,0 +1,72 @@
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#676767"
+blue = "#6871ff"
+cyan = "#5ffdff"
+green = "#5ff967"
+magenta = "#ff76ff"
+red = "#ff6d67"
+white = "#fffefe"
+yellow = "#fefb67"
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.line_indicator]
+background = "None"
+foreground = "#141414"
+
+[colors.normal]
+black = "#000000"
+blue = "#0225c7"
+cyan = "#00c5c7"
+green = "#00c200"
+magenta = "#c930c7"
+red = "#c91b00"
+white = "#c7c7c7"
+yellow = "#c7c400"
+
+[colors.primary]
+background = "#000000"
+foreground = "#c5c8c6"
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold_italic]
+style = "JetBrainsMono Nerd Font"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "T"
+mods = "Command"
+
+[mouse]
+hide_when_typing = false
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[window]
+decorations = "full"
+dynamic_title = true
+startup_mode = "Maximized"
