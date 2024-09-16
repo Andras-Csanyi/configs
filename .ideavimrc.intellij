@@ -30,9 +30,9 @@ map <leader>sa <Action>(SaveAll)
 " Refactor - rename
 map <leader>rr <Action>(RenameElement)
 " silently clean up code
-map <leader>ccl <Action>(SilentCodeCleanup)
+map <leader>ccl <Action>(ReformatCode)
 " map build the solution
-map <leader>bs <Action>(BuildSolutionAction)
+map <leader>bb <Action>(Maven.RunBuild)
 " map open solution view
 map <leader>e <Action>(ActivateProjectToolWindow)
 map <leader>ee <Action>(HideActiveWindow)
