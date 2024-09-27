@@ -79,3 +79,4 @@ java_error_in_idea_*
 .zsh_history
 .Trash/
 .zshrc
+.config/nvim/plugin/packer_compiled.lua

@@ -13,6 +13,9 @@ local options = {
   belloff = "all",
   errorbell = off,
 
+  -- colors
+  termguicolors = true, 
+
   -- if NeoVim will use swap file or not
   -- directory option defines where these files will be put
   -- directory is at default state
