@@ -1,0 +1,20 @@
+set autoindent
+
+set tabsize 4
+set tabstospaces
+
+set nowrap
+set softwrap
+
+#set linenumbers
+
+set regexp # regexp search
+
+## nanorc files
+include "/usr/local/share/nano/css.nanorc"
+include "/usr/local/share/nano/html.nanorc"
+include "/usr/local/share/nano/javascript.nanorc"
+include "/usr/local/share/nano/perl.nanorc"
+include "/usr/local/share/nano/python.nanorc"
+include "/usr/local/share/nano/ruby.nanorc"
+include "/usr/local/share/nano/sh.nanorc"
