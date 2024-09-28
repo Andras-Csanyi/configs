@@ -41,12 +41,24 @@ packer.init({
 -- installing packages
 return packer.startup(function(use)
 
+  -- must haves
   use { "wbthomason/packer.nvim" }
   use { "nvim-lua/plenary.nvim" }
 
   -- colorschemes
   use { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {} }
   use { "navarasu/onedark.nvim" }
+
+  --  cmp
+  use { "hrsh7th/nvim-cmp" } 
+  use { "hrsh7th/cmp-buffer" } 
+  use { "hrsh7th/cmp-path" } 
+  use { "hrsh7th/cmp-cmdline" } 
+  use { "saadparwaiz1/cmp_luasnip" } 
+
+  -- snippets
+  use { "L3MON4D3/LuaSnip" }
+  use { "rafamadriz/friendly-snippets" }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
