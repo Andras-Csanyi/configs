@@ -1,5 +1,8 @@
 require "andrascsanyi.options"
 require "andrascsanyi.keymaps"
 require "andrascsanyi.plugins"
+require "andrascsanyi.nvim-tree"
 require "andrascsanyi.colorscheme"
 require "andrascsanyi.cmp"
+require "andrascsanyi.lsp"
+require "andrascsanyi.autopairs"
