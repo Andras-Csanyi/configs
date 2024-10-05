@@ -80,3 +80,4 @@ java_error_in_idea_*
 .Trash/
 .zshrc
 .config/nvim/plugin/packer_compiled.lua
+.eclipse

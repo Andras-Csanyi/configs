@@ -44,15 +44,15 @@ return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim" })
 	use({ "nvim-lua/plenary.nvim" })
 
-  use({ "windwp/nvim-autopairs" })
+	use({ "windwp/nvim-autopairs" })
 
 	-- colorschemes
 	use({ "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {} })
 	use({ "navarasu/onedark.nvim" })
 
-  -- NvimTree
-  use({ "nvim-tree/nvim-web-devicons" })
-  use({ "nvim-tree/nvim-tree.lua" })
+	-- NvimTree
+	use({ "nvim-tree/nvim-web-devicons" })
+	use({ "nvim-tree/nvim-tree.lua" })
 
 	--  cmp
 	use({ "hrsh7th/nvim-cmp" })
@@ -72,6 +72,28 @@ return packer.startup(function(use)
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
 	use({ "jose-elias-alvarez/null-ls.nvim" })
+
+	-- java
+	use({ "mfussenegger/nvim-jdtls" })
+
+	use({ "nvim-telescope/telescope.nvim" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+
+	-- Commenting
+	use({ "numToStr/Comment.nvim" })
+	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
+
+	use({ "lewis6991/gitsigns.nvim" })
+
+	use({ "akinsho/bufferline.nvim", tag = "*" })
+	use({ "akinsho/toggleterm.nvim", tag = "*" })
+	use({ "moll/vim-bbye" })
+	use({ "nvimtools/none-ls.nvim" })
+	use({ "LintaoAmons/cd-project.nvim" })
+	use({ "lukas-reineke/indent-blankline.nvim" })
+	use({ "goolord/alpha-nvim" })
+	use({ "folke/which-key.nvim" })
+	use({ "echasnovski/mini.icons" })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

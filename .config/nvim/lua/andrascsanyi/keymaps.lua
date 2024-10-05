@@ -34,3 +34,14 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+-- Telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+
+-- Comment
+-- in normal mode
+-- gcc comment and uncomments
+-- 5gcc comments out 5 lines and comments back
+-- in visual mode
+-- gc to comment a lines
+-- 5gc to comment out 5 lines
