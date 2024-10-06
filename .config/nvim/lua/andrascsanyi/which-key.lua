@@ -23,22 +23,36 @@ local setup = {
 			g = true, -- bindings for prefixed with g
 		},
 	},
+	presets = "classic",
+	delay = function(ctx)
+		return ctx.plugin and 0 or 200
+	end,
 	-- add operators that will trigger motion and text object completion
 	-- to enable all native operators, set the preset / operators plugin above
 	-- operators = { gc = "Comments" },
-	key_labels = {
-		-- override the label used to display some keys. It doesn't effect WK in any other way.
-		-- For example:
-		-- ["<space>"] = "SPC",
-		-- ["<cr>"] = "RET",
-		-- ["<tab>"] = "TAB",
+	replace = {
+		key = {
+			function(key)
+				return require("which-key.view").format(key)
+			end,
+		},
+		desc = {
+			{ "<Plug>%(?(.*)%)?", "%1" },
+			{ "^%+", "" },
+			{ "<[cC]md>", "" },
+			{ "<[cC][rR]>", "" },
+			{ "<[sS]ilent>", "" },
+			{ "^lua%s+", "" },
+			{ "^call%s+", "" },
+			{ "^:%s*", "" },
+		},
 	},
 	icons = {
 		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
 		separator = "➜", -- symbol used between a key and it's label
 		group = "+", -- symbol prepended to a group
 	},
-	popup_mappings = {
+	keys = {
 		scroll_down = "<c-d>", -- binding to scroll down inside the popup
 		scroll_up = "<c-u>", -- binding to scroll up inside the popup
 	},
@@ -55,10 +69,14 @@ local setup = {
 		spacing = 3, -- spacing between columns
 		align = "left", -- align columns left, center or right
 	},
-	ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
+	filter = function(mapping)
+		-- excluding entries without description
+		return mapping.desc and mapping.desc ~= ""
+	end, -- enable this to hide mappings for which you didn't specify a label
 	show_help = true, -- show help message on the command line when the popup is visible
-	triggers = "auto", -- automatically setup triggers
-	-- triggers = {"<leader>"} -- or specify a list manually
+	triggers = {
+		{ "<leader>", mode = { "n", "v" } },
+	},
 }
 
 local opts = {
