@@ -94,6 +94,7 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim" })
 	use({ "folke/which-key.nvim" })
 	use({ "echasnovski/mini.icons" })
+	use({ "seblj/roslyn.nvim"	})
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

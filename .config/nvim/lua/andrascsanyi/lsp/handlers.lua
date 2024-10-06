@@ -68,6 +68,7 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
+  print("lsp client name: " .. client.name)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
 	end
