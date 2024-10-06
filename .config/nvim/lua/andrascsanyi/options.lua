@@ -32,6 +32,7 @@ local options = {
 	-- highlighting the line where the cursor in and how
 	cursorline = true,
 	cursorlineopt = "line",
+  colorcolumn="80,100,120",
 
 	----------------------------
 	-- global editing options --

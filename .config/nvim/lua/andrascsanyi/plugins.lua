@@ -92,9 +92,11 @@ return packer.startup(function(use)
 	use({ "LintaoAmons/cd-project.nvim" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "goolord/alpha-nvim" })
-	use({ "folke/which-key.nvim" })
+	--	use({ "folke/which-key.nvim" })
 	use({ "echasnovski/mini.icons" })
-	use({ "seblj/roslyn.nvim"	})
+	use({ "seblj/roslyn.nvim" })
+	use({ "nvim-lualine/lualine.nvim", opts = true })
+	use({ "tpope/vim-fugitive" })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
