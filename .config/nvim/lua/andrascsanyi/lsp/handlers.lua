@@ -47,42 +47,35 @@ M.setup = function()
 	})
 end
 
-local function lsp_keymaps(bufnr)
-	local opts = { noremap = true, silent = true }
-	local keymap = vim.api.nvim_buf_set_keymap
-	keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<CR>", opts)
-	keymap(bufnr, "n", "<leader>li", "<cmd>LspInfo<CR>", opts)
-	keymap(bufnr, "n", "<leader>lI", "<cmd>LspInstallInfo<CR>", opts)
-	keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({ buffer=0 })<CR>", opts)
-	keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({ buffer=0 })<CR>", opts)
-	keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+local function keymap(mode, l, r, opts)
+	opts = opts or {}
+	opts.buffer = true
+	opts.desc = string.format("Lsp: %s", opts.desc)
+	vim.keymap.set(mode, l, r, opts)
 end
 
-M.on_attach = function(client, bufnr)
-  print("lsp client name: " .. client.name)
-	if client.name == "tsserver" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
-	if client.name == "lsp_lua" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
-
-	lsp_keymaps(bufnr)
-	local status_ok, illuminate = pcall(require, "illuminate")
-	if not status_ok then
-		return
-	end
-	illuminate.on_attach(client)
-end
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("DefaultLspAttach", { clear = true }),
+	callback = function()
+		keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "Go to declaration" })
+		keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Go to definition"})
+		keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Show info in hover window"})
+		keymap("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "Go to implementation"})
+		keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "Show references"})
+		keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Show info in hower window"})
+		keymap("n", "<leader>rf", "<cmd>lua vim.lsp.buf.format{ async = true }<CR>", { desc = "Reformat file"})
+		keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code actions"})
+		keymap("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({ buffer=0 })<CR>", { desc = "Next diagnostic issue"})
+		keymap("n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({ buffer=0 })<CR>", { desc = "Previous diagnostic issue"})
+		keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "Rename"})
+		keymap("n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "Show signature"})
+		keymap("n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", { desc = "Fuck knows what is this"})
+    keymap("n", "<leader>lh", function()
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+    end,
+      { desc = "Toggle inlay hints."}
+    )
+	end,
+})
 
 return M
