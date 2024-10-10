@@ -7,6 +7,7 @@ local servers = {
 	"jsonls",
 	"yamlls",
   "jdtls",
+  "marksman"
 }
 
 local settings = {
