@@ -44,6 +44,7 @@ map <leader>e :NERDTree<CR>
 map <C-h> :NERDTree<CR>
 map <leader>ec :NERDTreeClose<CR>
 map <leader>ee <Action>(HideActiveWindow)
+map a g:NERDTreeMapNewFile
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 map <leader>rf <Action>(ReformatCode)
