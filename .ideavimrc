@@ -30,16 +30,18 @@ set relativenumber
 set number
 
 " Save all files
-map <leader>sa <Action>(SaveAll)
+map <C-s> <Action>(SaveAll)
 " Refactor - rename
 map <leader>rr <Action>(RenameElement)
 " silently clean up code
 map <leader>ccl <Action>(SilentCodeCleanup)
 " map build the solution
-map <leader>bs <Action>(BuildSolutionAction)
+map <leader>bb <Action>(BuildSolutionAction)
 " map open solution view
 " map <leader>e <Action>(ActivateProjectToolWindow)
 map <leader>e :NERDTree<CR>
+" the below comes from LazyVim
+map <C-h> :NERDTree<CR>
 map <leader>ec :NERDTreeClose<CR>
 map <leader>ee <Action>(HideActiveWindow)
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
@@ -47,6 +49,10 @@ map <leader>ee <Action>(HideActiveWindow)
 map <leader>rf <Action>(ReformatCode)
 map <leader>tt <Action>(RiderUnitTestRunSolutionAction)
 map K <Action>(QuickJavaDoc)
+" closing the actual tab
+map <leader>bd <Action>(CloseContent)
+" One step Back - equals to Ctrl-o in LazyVim
+map <C-o> <Action>(Back)
 "" Map <leader>d to start debug
 "map <leader>d <Action>(Debug)
 
