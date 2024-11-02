@@ -49,6 +49,7 @@
 .texlive2023/
 .thumbnails/
 .tmux.conf
+.vim/
 .viminfo
 .vscode/
 .zcompdump*
@@ -73,6 +74,7 @@ dotnet-core-uninstall/
 eclipse-workspace/
 eclipse/
 help/
+go/
 istalled.txt
 istat-menus-license.txt
 java_error_in_idea_*

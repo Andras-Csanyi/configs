@@ -1,0 +1,15 @@
+[manager]
+linemode = "size_and_time"
+show_hidden = true
+sort_by = "alphabetical"
+sort_sensitive = false
+
+[[pugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[pugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
