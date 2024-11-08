@@ -70,6 +70,7 @@ Public/
 RoslynLangServer/
 WebstormProjects/
 ZelCore/
+bin/
 dotnet-core-uninstall/
 eclipse-workspace/
 eclipse/
