@@ -17,7 +17,7 @@ return {
       gopls = {
         settings = {
           gopls = {
-            gofmt = true,
+            gofumpt = true,
             codelenses = {
               gc_details = false,
               generate = true,
