@@ -3,7 +3,7 @@ return {
   lazy = true,
   cmd = { "ToggleTerm" },
   keys = {
-    { "<C-\\>", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" },
+    { "<leader>tf", "<cmd>ToggleTerm<cr>", desc = "Toggle floating terminal" },
   },
   opts = {
     open_mapping = [[<c-\>]],
