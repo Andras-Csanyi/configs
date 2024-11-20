@@ -8,6 +8,8 @@ return {
       "gomodifytags",
       "impl",
       "delve",
+      "html-lsp",
+      "netcoredbg",
     },
   },
 }

@@ -28,6 +28,8 @@ Plug 'preservim/nerdtree'
 
 set relativenumber
 set number
+-- when yank it keeps the cursor where it was when yank
+vnoremap y m`y``
 
 " Save all files
 map <C-s> <Action>(SaveAll)
