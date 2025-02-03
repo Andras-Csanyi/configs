@@ -3,13 +3,16 @@ return {
   opts = {
     ensure_installed = {
       "bash",
-      "bibtex",
-      "latex",
       "lua",
       "luadoc",
       "luap",
+      "go",
+      "gomod",
+      "gowork",
+      "gosum",
+      "c_sharp",
+      "java",
       "yaml",
-      "rust",
     },
   },
 }

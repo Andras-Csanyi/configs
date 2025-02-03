@@ -60,9 +60,9 @@ return {
     -- dotnet settings
     local dap = require("dap")
     local packages_dir = require("mason.settings").current.install_root_dir
-    dap.adapters.coreclr = {
+    dap.adapters.netcoredbg = {
       type = "executable",
-      command = packages_dir .. "\\packages\\netcoredbg\\netcoredbg",
+      command = packages_dir .. "/packages/netcoredbg/netcoredbg",
       args = { "--interpreter=vscode" },
     }
     dap.configurations.cs = {

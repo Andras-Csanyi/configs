@@ -128,3 +128,10 @@ git_tree/
 perl5/
 settings.xml
 zsh-syntax-highlighting/
+.netcoredbg_hist
+.rustup
+.wget-hsts
+~/PycharmProjects
+~/bin/idea
+~/bin/rider
+~/PycharmProjects/

@@ -4,12 +4,7 @@ show_hidden = true
 sort_by = "alphabetical"
 sort_sensitive = false
 
-[[pugin.prepend_fetchers]]
+[pugin.prepend_fetchers]
 id = "git"
 name = "*"
-run = "git"
-
-[[pugin.prepend_fetchers]]
-id = "git"
-name = "*/"
 run = "git"

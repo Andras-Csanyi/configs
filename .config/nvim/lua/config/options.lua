@@ -7,3 +7,6 @@ local opt = vim.opt
 opt.scrolloff = 10
 -- how many colums should remain visible right of the cursor
 opt.sidescrolloff = 10
+
+-- rust
+vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
