@@ -48,7 +48,6 @@
 .terminfo/
 .texlive2023/
 .thumbnails/
-.tmux.conf
 .vim/
 .viminfo
 .vscode/
