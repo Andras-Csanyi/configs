@@ -1,10 +1,16 @@
 [manager]
-linemode = "size_and_time"
 show_hidden = true
 sort_by = "alphabetical"
 sort_sensitive = false
+linemode = "size_and_mtime"
 
 [pugin.prepend_fetchers]
 id = "git"
 name = "*"
 run = "git"
+
+[preview]
+wrap = "yes"
+
+[input]
+cursor_blink = true

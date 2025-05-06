@@ -1,4 +1,6 @@
-live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -33,7 +35,7 @@ yellow = "#c7c400"
 
 [colors.primary]
 background = "#000000"
-foreground = "#c5c8c6"
+foreground = "#ffffff"
 
 [cursor.style]
 blinking = "Always"
@@ -54,10 +56,13 @@ family = "JetBrainsMono Nerd Font"
 [font.normal]
 family = "JetBrainsMono Nerd Font"
 
-[[keyboard.bindings]]
-action = "CreateNewWindow"
-key = "T"
-mods = "Command"
+[keyboard]
+bindings = [
+  { key = "c", mods = "Control", action = "Copy" },
+  { key = "v", mods = "Control", action = "Paste" },
+  { key = "T", mods = "Command", action = "CreateNewWindow" },
+]
+
 
 [mouse]
 hide_when_typing = false
@@ -68,5 +73,11 @@ multiplier = 3
 
 [window]
 decorations = "full"
+# None follows system
+decorations_theme_variant = "None"
 dynamic_title = true
 startup_mode = "Maximized"
+padding = { x = 10, y = 10 }
+
+[general]
+live_config_reload = true
