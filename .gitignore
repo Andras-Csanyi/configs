@@ -134,3 +134,6 @@ zsh-syntax-highlighting/
 ~/bin/idea
 ~/bin/rider
 ~/PycharmProjects/
+.matplotlib/
+.sqlite_history
+Sites/

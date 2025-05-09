@@ -31,6 +31,11 @@ set number
 -- when yank it keeps the cursor where it was when yank
 vnoremap y m`y``
 
+" complete silence
+set noerrorbells
+set visualbell
+set t_vb=
+
 " Save all files
 map <C-s> <Action>(SaveAll)
 " Refactor - rename
