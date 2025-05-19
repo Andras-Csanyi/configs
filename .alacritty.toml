@@ -58,8 +58,8 @@ family = "JetBrainsMono Nerd Font"
 
 [keyboard]
 bindings = [
-  { key = "c", mods = "Control", action = "Copy" },
-  { key = "v", mods = "Control", action = "Paste" },
+  { key = "c", mods = "Command", action = "Copy" },
+  { key = "v", mods = "Command", action = "Paste" },
   { key = "T", mods = "Command", action = "CreateNewWindow" },
 ]
 
