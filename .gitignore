@@ -137,3 +137,4 @@ zsh-syntax-highlighting/
 .matplotlib/
 .sqlite_history
 Sites/
+.config/nvim/lazy-lock.json
