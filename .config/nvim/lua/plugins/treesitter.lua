@@ -10,6 +10,7 @@ return {
       "luap",
       "yaml",
       "rust",
+      "java",
     },
   },
 }

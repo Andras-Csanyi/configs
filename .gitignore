@@ -138,3 +138,4 @@ zsh-syntax-highlighting/
 .sqlite_history
 Sites/
 .config/nvim/lazy-lock.json
+.testcontainers.properties
