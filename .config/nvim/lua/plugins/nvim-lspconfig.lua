@@ -1,5 +1,11 @@
 return {
   "nvim-lspconfig",
+  dependencies = {
+    "nvim-java/nvim-java",
+  },
+  config = function()
+    require("lspconfig")["jdtls"].setup({})
+  end,
   opts = {
     inlay_hints = {
       enabled = true,
