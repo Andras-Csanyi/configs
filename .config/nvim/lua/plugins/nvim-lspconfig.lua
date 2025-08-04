@@ -1,12 +1,12 @@
 return {
-  "nvim-lspconfig",
-  dependencies = {
-    "nvim-java/nvim-java",
-  },
-  config = function()
-    require("lspconfig")["jdtls"].setup({})
-  end,
+  "neovim/nvim-lspconfig",
   opts = {
+    servers = {
+      postgres_lsp = {
+        filetypes = { "sql" },
+        root_dir = require("lspconfig.util").root_pattern(".git", "package.json"),
+      },
+    },
     inlay_hints = {
       enabled = true,
     },

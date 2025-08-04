@@ -11,6 +11,7 @@ return {
       "yaml",
       "rust",
       "java",
+      "sql",
     },
   },
 }

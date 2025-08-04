@@ -4,9 +4,11 @@
 local opt = vim.opt
 
 -- how many lines should remain visible before the cursor
-opt.scrolloff = 10
+opt.scrolloff = 20
 -- how many colums should remain visible right of the cursor
-opt.sidescrolloff = 10
+opt.sidescrolloff = 20
+
+vim.opt.colorcolumn = "100"
 
 -- rust
 vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
