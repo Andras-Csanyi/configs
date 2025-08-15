@@ -36,10 +36,16 @@ set noerrorbells
 set visualbell
 set t_vb=
 
+let g:NERDTreeMapNewFile = 'a'
+let g:NERDTreeMapActivateNode = 'l'
+let g:NERDTreeMapCloseDir = 'h'
+
+" 
+map <leader>ca <Action>(ShowIntentionActions)
 " Save all files
 map <C-s> <Action>(SaveAll)
 " Refactor - rename
-map <leader>rr <Action>(RenameElement)
+map <leader>cr <Action>(RenameElement)
 " silently clean up code
 map <leader>ccl <Action>(SilentCodeCleanup)
 " map build the solution
@@ -51,7 +57,6 @@ map <leader>e :NERDTree<CR>
 map <C-h> :NERDTree<CR>
 map <leader>ec :NERDTreeClose<CR>
 map <leader>ee <Action>(HideActiveWindow)
-map a g:NERDTreeMapNewFile
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 map <leader>rf <Action>(ReformatCode)
