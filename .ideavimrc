@@ -40,6 +40,10 @@ let g:NERDTreeMapNewFile = 'a'
 let g:NERDTreeMapActivateNode = 'l'
 let g:NERDTreeMapCloseDir = 'h'
 
+sethandler <S-h> a:vim
+sethandler <S-l> a:vim
+nnoremap <S-h> :action PreviousTab<CR>
+nnoremap <S-l> :action NextTab<CR>
 " 
 map <leader>ca <Action>(ShowIntentionActions)
 " Save all files
